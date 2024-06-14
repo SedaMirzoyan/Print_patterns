@@ -184,6 +184,65 @@ void triangleOddStarPattern(const int n, const int m)
     }
 }
 
+void triangleAlphabetColPattern(const int n)
+{
+    char c = 'A';
+    int asciiValue = (int)c;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            std::cout << (char)(c + j);
+        }
+        std::cout << std::endl;
+    }
+}
+
+
+void triangleAlphabetLeftDownPattern(const int n)
+{
+    char c = 'A';
+    int asciiValue = (int)c;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= n - i - 1; j++)
+        {
+            std::cout << (char)(c + j);
+        }
+        std::cout << std::endl;
+    }
+}
+
+void triangleAlphabetRowPattern(const int n)
+{
+    char c = 'A';
+    int asciiValue = (int)c;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            std::cout << (char)(c + i);
+        }
+        std::cout << std::endl;
+    }
+}
+
+void triangleOddStarDownPattern(const int n, const int m)
+{
+    for (int i = n - 1; i >= 0; i--)
+    {
+        for (int j = 0; j <= n - i - 1; j++)
+        {
+            std::cout << " ";
+        }
+        for (int j = 0; j < 2 * i + 1; j++)
+        {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+}
+
 int main()
 {
     //rectangleFullPattern(3, 4);
@@ -196,7 +255,12 @@ int main()
     //leftTriangleUpFullNumbersIncrPattern(5);
     //leftTriangleFullAllNumsPatern(4);
     //triangleOddEvenStarPattern(5, 9);
-    triangleOddStarPattern(4, 7);
+    //triangleOddStarPattern(4, 7);
+    //triangleAlphabetColPattern(5);
+    //triangleAlphabetLeftDownPattern(5);
+    //triangleAlphabetRowPattern(5);
+    triangleOddStarDownPattern(15, 24);
+
 
     return 0;
 }
