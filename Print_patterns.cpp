@@ -151,7 +151,7 @@ void leftTriangleFullAllNumsPatern(const int n)
 
 
 
-void triangleOddEvenStarPattern(const int n, const int m)
+void triangleOddEvenStarPattern(const int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -168,7 +168,7 @@ void triangleOddEvenStarPattern(const int n, const int m)
     }
 }
 
-void triangleOddStarUpPattern(const int n, const int m)
+void triangleOddStarUpPattern(const int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -229,7 +229,7 @@ void triangleAlphabetRowPattern(const int n)
 }
 
 
-void triangleOddStarDownPattern(const int n, const int m)
+void triangleOddStarDownPattern(const int n)
 {
     for (int i = n - 1; i >= 0; i--)
     {
@@ -276,6 +276,29 @@ void diamondStarPattern(const int n)
     }
 }
 
+
+void trangleBigRightPattern(const int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= n - i - 2; j++)
+        {
+            std::cout << "*";
+        }
+     std::cout << std::endl;
+    }
+}
+
+
 int main()
 {
     //rectangleFullPattern(3, 4);
@@ -287,13 +310,14 @@ int main()
     //rightTriangleUpFullPattern(12);             
     //leftTriangleUpFullNumbersIncrPattern(5);
     //leftTriangleFullAllNumsPatern(4);
-    //triangleOddEvenStarPattern(5, 9);
-    //triangleOddStarUpPattern(24, 7);
+    //triangleOddEvenStarPattern(5);
+    //triangleOddStarUpPattern(24);
     //triangleAlphabetColPattern(5);
     //triangleAlphabetLeftDownPattern(5);
     //triangleAlphabetRowPattern(5);
-    //triangleOddStarDownPattern(15, 24);
-    diamondStarPattern(8);
+    //triangleOddStarDownPattern(15);
+    //diamondStarPattern(8);
+    trangleBigRightPattern(5);
 
     return 0;
 }
